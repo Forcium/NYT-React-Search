@@ -28,7 +28,7 @@ app.use(express.static('./public'));
 
 //-----------------------------------------Database configuration for mongoose
 
-mongoose.connect("mongodb://heroku_qk9szx8g:547891d1l7eiamipu4cme7a2v6@ds139954.mlab.com:39954/heroku_qk9szx8g");
+// mongoose.connect("mongodb://heroku_qk9szx8g:547891d1l7eiamipu4cme7a2v6@ds139954.mlab.com:39954/heroku_qk9szx8g");
 
 mongoose.connect("mongodb://localhost/nytreact", {useMongoClient: true});
 
