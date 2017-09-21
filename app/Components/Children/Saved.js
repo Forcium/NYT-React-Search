@@ -14,6 +14,30 @@ var Saved = React.createClass({
 		this.props.deleteArticle(result);
 	},
 
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~fix this and insert to the saved.js
+
+
+	componentWillReceiveProps: function(nextProps){
+			var savedProps = this;
+			console.log("this is: " + this);
+			console.log("the savedProps is: " + savedProps);
+
+			var savedResult = nextProps.savedArticles.map(function(search, i){
+
+				var clickBounds = savedProps.clickToDelete.bind(savedProps, search);
+				return <div className="list-group-item" key={i}>
+	        <a href={search.url} target="_blank">{search.title}</a>
+	        <br />
+	        {search.date}
+	        <br />
+	        <button type="button" className="btn btn-success" style={{'float': 'right', 'marginTop': '-40px'}} onClick={clickBounds}>Delete</button>
+	      </div>
+			});
+			console.log(savedResult);
+
+			this.setState({savedArticles: savedResult});
+		},
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	// render function
 	render: function(){
