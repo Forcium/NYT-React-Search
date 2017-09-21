@@ -29,7 +29,7 @@ var Results = React.createClass({
         <br />
         {search.pub_date}
         <br />
-        <button type="button" className="btn btn-warning" style={{'float': 'right', 'marginTop': '-40px'}} onClick={clickBound}>Save Article</button>
+        <button type="button" className="btn btn-success" style={{'float': 'right', 'marginTop': '-40px'}} onClick={clickBound}>Save Article</button>
       </div>
     });
 
@@ -40,7 +40,7 @@ var Results = React.createClass({
     return(
       <div className="panel panel-info">
         <div className="panel-heading">
-          <h3 className="panel-title text-center" style={{'color': 'gray'}}>Results</h3>
+          <h3 className="panel-title text-center" style={{'color': 'gray'}}>Search Results</h3>
         </div>
         <div className="panel-body">
           {this.state.results}

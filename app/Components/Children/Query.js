@@ -31,7 +31,7 @@ var Query = React.createClass({
     return(
       <div className="panel panel-info">
         <div className="panel-heading">
-          <h2 className="panel-title text-center" style={{'color': 'gray'}}>Search</h2>
+          <h2 className="panel-title text-center" style={{'color': 'gray'}}>Enter a topic along with starting and ending year below</h2>
         </div>
         <div className="panel-body text-center">
 
@@ -49,7 +49,7 @@ var Query = React.createClass({
               <input type="text" className="form-control text-center" id="endYear" onChange= {this.handleChange} required/>
               <br />
 
-              <button type="button" className="btn btn-primary" onClick={this.handleClick}>Search</button>
+              <button type="button" className="btn btn-success" onClick={this.handleClick}>Search</button>
             </div>
           </form>
 
